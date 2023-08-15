@@ -2,11 +2,15 @@ package greg.wms.wms.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import lombok.Getter;
+import lombok.Setter;
+
 
 @Data
 @Entity
 @Table(name = "Uzytkownicy")
+@Getter
+@Setter
 public class Uzytkownicy {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,16 +30,9 @@ public class Uzytkownicy {
         Kierownik,
         Biura
     }
-//    @Transient
-//    private final PasswordEncoder passwordEncoder;
-//    public Uzytkownicy(PasswordEncoder passwordEncoder) {
-//        this.passwordEncoder = passwordEncoder;
-//    }
-//
-//    private PasswordEncoder passwordEncoder;
-    public String getHaslo() {
-        return "Tajne haslo";
-    };
+//    public String getHaslo() {
+//        return "Tajne haslo";
+//    };
 
     @Column(name = "typ", nullable = false)
     @Enumerated(EnumType.STRING)

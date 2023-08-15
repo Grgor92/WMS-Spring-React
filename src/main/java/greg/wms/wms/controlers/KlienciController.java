@@ -1,5 +1,6 @@
 package greg.wms.wms.controlers;
 import greg.wms.wms.services.KlienciService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import greg.wms.wms.model.Klienci;
 import org.springframework.http.HttpStatus;
@@ -11,8 +12,8 @@ import java.util.Optional;
 
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("api/v1/klienci")
-//@CrossOrigin(origins = "http://localhost:3000")
 public class KlienciController {
     @Autowired
     private KlienciService KlienciService;

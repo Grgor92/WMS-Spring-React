@@ -1,8 +1,10 @@
 package greg.wms.wms.model;
 
 import jakarta.persistence.*;
-import java.util.Date;
+import lombok.Data;
 
+import java.util.Date;
+@Data
 @Entity
 @Table(name = "kontrahenci")
 public class Kontrahenci {
@@ -35,16 +37,13 @@ public class Kontrahenci {
     @Temporal(TemporalType.DATE)
     private Date dataRejestracji;
     @Column(name = "data_modyfikacji")
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date dataModyfikacji;
     @Column(name = "stan", nullable = false, length = 32)
     private String stan;
 
-    public Long getId_kon() {
-        return null;
-    }
-    // Dodaj gettery, settery oraz ewentualnie konstruktory
-    // ...
+
+
 
 }
 
