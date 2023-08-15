@@ -34,3 +34,5 @@ build/
 
 ### env ###
 .env/
+/src/main/java/greg/wms/wms/controlers/dto/
+/src/main/java/greg/wms/wms/controlers/dto/DokumentyDto.java
